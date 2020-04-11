@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Profile</title>
+    <style>
+        :root{
+            --op-color:white;
+            --bg-color:#222;
+            --hv-color: #0984e3;
+        }
+            *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            width: 100vw;
+            background: var(--bg-color);
+        }
+        #welcome-section{
+            height:100vh;
+        }
+        #menu {
+            background-color: red;
+            position: fixed;
+            width: 100vw;
+            height: 45px;
+        }
+        #menu {
+            padding-top: 0.8rem;
+            
+        }
+        #menu li {
+            list-style-type: none;
+            box-shadow: 0px 8px 16px #FF5E84;
+            padding: 0 5rem;
+            text-align: center;
+            font-size: 1.6rem;
+            justify-items: space-evenly;
+        }
+        #menu li a{
+            color: var(--op-color);
+            border-radius: 30px 0;
+            text-decoration: none;
+            padding: 0 3rem;
+        }
+        #menu li a:hover{
+            
+            background-color: var(--hv-color);
+        }
+        #welcome-section h1 {
+            color: var(--op-color);
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin: 0 !important;
+            padding: 8rem 0 2rem 0;
+        }
+        #main-presentation {
+            width: 80vw;
+            margin: 3rem 5rem 5rem -21rem;
+        }   
+        #projects{
+            background: linear-gradient(-45deg,rgba(45,45,45,0.6),#454545);
+            display: grid;
+            grid-template-areas: repeat(4, minmax(120px, 1fr));
+        }
+        .project-title{
+            font-size: 180%;
+            text-align: center;
+            color: var(--op-color);
+            padding: 2rem 0;
+            grid-column: 1/5;
+            
+        }
+        /*  if I user grid-template-columns
+        .project-title:nth-child(1){
+            font-size: 180%;
+            text-align: center;
+            color: var(--op-color);
+            padding: 2rem 0;
+        }*/
+        #project h1{
+            color:  rgba(253, 149, 90, 0.8);
+        }
+        #project a{
+            color: var(--op-color);
+            margin-bottom: 0.5rem;
+        }
+        #project a:hover, #contact-link a:hover{
+            color: var(--hv-color);
+
+        }
+        #project{
+            padding: 0.5rem 0 3rem 2rem;
+        }
+        #navbar {
+            position:fixed;
+            width: 100vw;
+    
+        }
+
+        .let-highlight{
+            color: #C0AD60;
+        }
+        .str-highlight{
+            color: rgba(253, 149, 90, 0.8);
+        }
+        .str-white{
+            color: var(--op-color);
+        }
+        #typewriter{
+            font-size: 2em;
+            margin: 0;
+            font-family: "Courier New" !important;
+            color: rgb(0, 174, 255);
+        }
+        /*Cursor while tiping*/
+        #typewriter::after {
+                content: "|";
+            	animation: blink 500ms linear alternate infinite;
+                color: var(--op-color);
+            } 
+        
+        #contacts{
+            background: var(--op-color);
+            padding: 3rem;
+            width: 100vw;
+            text-align: center;
+            
+        }
+        #contacts img{
+            width: 50px;
+            height: 50px;
+        }
+        #contact-link {
+            justify-items: center;
+            margin-top: 3rem;
+        }
+        #contact-link a{
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: black;
+            margin-left: 0.4rem;
+        }
+        #contacts h1{
+            font-size: 250%;
+            font-weight: bolder;
+
+        }
+        #contacts h2{
+            opacity: 0.7;
+        }
+       
+        @keyframes blink{
+            to{opacity: .0;}
+        } 
+
+        @media (max-width: 625px){
+            html {
+                font-size: 0.4rem;
+            }
+            #menu li {
+                font-size: 4rem;
+            }
+        }
+        
+        @media (max-width: 375px){
+            #menu li a {
+                padding: 0 1rem;
+            }
+            #menu li {
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        
+        <section id="welcome-section">
+            <div id="menu">
+                <nav id="navbar">
+                    <ul>
+                        <li>
+                            <a href="#welcome-section">Home</a>
+                            <a href="#projects">Projetcs</a>
+                            <a href="#contacts">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
+           </div>
+            <h1>Welcome to my Personal Portfolio Webpage</h1>
+            
+            <div id="main-presentation">
+                <pre id="typewriter">
+                    <span class="let-highlight">let</span> me_do_Great_Projects <span class="str-white"> = { </span>
+                                name<span class="str-white">: </span><span class="str-highlight">'js-farnesi'</span><span class="str-white">,</span>
+                                type<span class="str-white">: </span><span class="str-highlight">'Developer'</span><span class="str-white">,</span>
+                                location<span class="str-white">: </span><span class="str-highlight">'Brazil'</span><span class="str-white">,</span>
+                                properties<span class="str-white">:[</span><span class="str-highlight">'Javascript'</span><span class="str-white">,</span>
+                                            <span class="str-highlight">'HTML'</span><span class="str-white">,</span>
+                                            <span class="str-highlight">'CSS'</span><span class="str-white">];</span>
+                    <span class="str-white">};</span>
+    
+                </pre>
+            </div>
+
+        </section>
+        
+        <section id="projects">
+
+            <div class="project-title">
+                <h1>These are some of my projects</h1>
+            </div>
+            <div id="project" id="first">
+                    <h1 id=title>Tribute Page</h1>
+                    <a href="https://codepen.io/js-farnesi/pen/OJVYwWJ"
+                    target="_blank">FCC - Tribute Page</a>
+            </div>
+
+            <div id="project" id="second">
+                <h1 id=title>Survey Form</h1>
+                <a href="https://codepen.io/js-farnesi/pen/XWbLzga"
+                target="_blank">FCC - Survey Form</a>
+            </div>
+
+            <div id="project" id="third">
+                <h1 id=title>Product Landing Page</h1>
+                <a href="https://codepen.io/js-farnesi/pen/dyYbvOw"
+                target="_blank">FCC - Product Landing Page</a>
+            </div>
+
+            <div id="project" id="fourth">
+                <h1 id=title>Technical Documentation</h1>
+                <a href="https://codepen.io/js-farnesi/pen/KKdKdWL"
+                target="_blank">FCC - Technical Documentation</a>
+            </div>
+
+        </section>
+        <section id="contacts">
+            <h1>Let's work together...</h1>
+            <h2>How do you take your coffee?</h2>
+            <div id="contact-link">
+                <img 
+                    src="https://image.flaticon.com/icons/svg/25/25231.svg" 
+                    alt="github">
+                <a id="git" 
+                    href="https://github.com/js-farnesi"
+                    target="_blank">GitHub</a>
+                <img 
+                    src="https://image.flaticon.com/icons/svg/2111/2111341.svg" 
+                    alt="codepen">
+                <a id="codepen" 
+                    href="https://codepen.io/js-farnesi"
+                    target="_blank">CodePen</a>
+                <img 
+                    src="https://cdn.rawgit.com/Deftwun/e3756a8b518cbb354425/raw/6584db8babd6cbc4ecb35ed36f0d184a506b979e/free-code-camp-logo.svg" 
+                    alt="freecodecamp">
+                <a id="profile-link" 
+                    href="https://www.freecodecamp.org/fcc26814485-1d6b-4454-92e6-49abf882a3c9"
+                    target="_blank">FreeCodeCamp</a>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        	function setupTypewriter(t) {
+	    var HTML = t.innerHTML;
+
+	    t.innerHTML = "";
+
+	    var cursorPosition = 0,
+	        tag = "",
+	        writingTag = false,
+	        tagOpen = false,
+	        typeSpeed = 100,
+        tempTypeSpeed = 0;
+
+	    var type = function() {
+        
+	        if (writingTag === true) {
+	            tag += HTML[cursorPosition];
+	        }
+
+	        if (HTML[cursorPosition] === "<") {
+	            tempTypeSpeed = 0;
+	            if (tagOpen) {
+	                tagOpen = false;
+	                writingTag = true;
+	            } else {
+	                tag = "";
+	                tagOpen = true;
+	                writingTag = true;
+	                tag += HTML[cursorPosition];
+	            }
+	        }
+	        if (!writingTag && tagOpen) {
+	            tag.innerHTML += HTML[cursorPosition];
+	        }
+	        if (!writingTag && !tagOpen) {
+	            if (HTML[cursorPosition] === " ") {
+	                tempTypeSpeed = 0;
+	            }
+	            else {
+	                tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+	            }
+	            t.innerHTML += HTML[cursorPosition];
+	        }
+	        if (writingTag === true && HTML[cursorPosition] === ">") {
+	            tempTypeSpeed = (Math.random() * typeSpeed) + 50;
+	            writingTag = false;
+	            if (tagOpen) {
+	                var newSpan = document.createElement("span");
+	                t.appendChild(newSpan);
+	                newSpan.innerHTML = tag;
+	                tag = newSpan.firstChild;
+	            }
+	        }
+
+	        cursorPosition += 1;
+	        if (cursorPosition < HTML.length - 1) {
+	            setTimeout(type, tempTypeSpeed);
+	        }
+
+	    };
+
+            return {
+                type: type
+            };
+        }
+
+        var typer = document.getElementById('typewriter');
+
+        typewriter = setupTypewriter(typewriter);
+
+        typewriter.type();
+
+    </script>
+</body>
+</html>
