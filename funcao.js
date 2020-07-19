@@ -188,3 +188,18 @@ console.log(diasDeTrabalho.indexOf ("osvaldo"))
 
 -1
 
+
+function aberturas(arrs,min){
+    resultado = []
+    for (var i =0; i< arrs.length; i++){
+      console.log(arrs[i])
+      resultado.push(acontece(arrs[i],min))
+    }
+    console.log(resultado)
+    return resultado
+  }
+  
+  
+  
+  aberturas([alunosDaSegunda, alunosDaTerca, alunosDaQuarta, alunosDaQuinta, alunosDaSexta], 3)
+  
