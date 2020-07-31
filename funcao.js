@@ -104,4 +104,4 @@ var listaDeNumeros = [[1, 2, 3], [4, 5, 6]];
 [ 1, 6, 6, 2, 2, 4 ]
 [ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
 
-//Em breve mais funções
+//Em breve mais funções disponíveis
