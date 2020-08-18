@@ -10,7 +10,6 @@ for (num = 0; num <= 100; num++){
     }
 }
 
-// Arrow funcion
 
 // Function com parâmetro rest - pode passar até 20 complementos
 function escreverEndereco(rua, cidade, pais, ...complementos){
