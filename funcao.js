@@ -103,7 +103,7 @@ var listaDeNumeros = [[1, 2, 3], [4, 5, 6]];
 [ 1, 6, 6, 2, 2, 4 ]
 [ [ 1, 2, 3 ], [ 4, 5, 6 ] ]
 
-// Calculo de fórmula de bhaskaras
+// Função para Calculo de fórmula de bhaskaras
 function bhaskara (ax2, bx, c) {
     let resultados = []
     let delta = (bx ** 2) - (4 * ax2 * c)
